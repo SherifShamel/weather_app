@@ -1,0 +1,141 @@
+:root {
+  --main-color: #4fc3f7; /* Updated main color: sky blue */
+}
+
+.myMainColor {
+  color: var(--main-color) !important;
+}
+
+body {
+  background-color: #121212; /* Dark background */
+}
+
+.mini-text {
+  font-size: 12px;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+  flex-basis: 100%;
+  align-items: center;
+}
+
+.logo-container {
+  cursor: pointer;
+}
+
+.nav-link {
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.3s;
+  color: #e0e0e0; /* Light text */
+  border: 1px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--main-color);
+  border-radius: 50%;
+  border-color: var(--main-color);
+}
+
+#navbarNavAltMarkup .active {
+  color: var(--main-color);
+  border-radius: 50%;
+  border-color: var(--main-color);
+}
+
+.main-btn {
+  right: 1%;
+  background-color: var(--main-color); /* Button color */
+  color: #000;
+  /* border: none; */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  --bs-btn-hover-bg: black;
+  --bs-btn-hover-color: var(--main-color);
+}
+.city-input {
+  border-radius: 18px;
+  background-color: #1e1e1e; /* Input background */
+  color: #e0e0e0; /* Input text */
+  border: 1px solid #333;
+  height: 50px;
+}
+
+.city-input::placeholder {
+  color: #b0bec5; /* Subtle placeholder */
+}
+
+.background-banner {
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: url(../assets/banner.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.card-body {
+  height: 50vh;
+}
+
+.card p,
+.card i,
+.card h1,
+.card h2 {
+  color: #e0e0e0; /* Light text inside cards */
+}
+
+.card-header {
+  justify-items: center;
+}
+
+.card-header p {
+  color: #6d6d6d; /* Subtle card header text */
+  margin: 0;
+  padding: 0;
+}
+
+.single-icon {
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.links-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #1e1e1e; /* Updated to match dark theme */
+  border-radius: 50%;
+  transition: all 0.3s;
+  color: var(--main-color);
+  text-decoration: unset;
+}
+
+.links-section a:hover {
+  background-color: var(--main-color);
+}
+
+.links-section a:hover i {
+  transition: all 0.3s;
+  color: #1e1e1e; /* Icon hover contrast */
+}
+
+footer {
+  background-color: #1e1e1e; /* Footer dark */
+  margin-top: 50px;
+}

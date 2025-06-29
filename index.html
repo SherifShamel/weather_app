@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingment 11 - Weather App</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://kit.fontawesome.com/f50fbec728.js" crossorigin="anonymous"></script>
+
+    <!-- pacifico font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-dark py-4">
+                <div class="container-fluid">
+                    <div class="logo-container d-flex align-items-center justify-content-center">
+                        <img src="assets/logo.png" class="w-25 me-3" alt="logo">
+
+                        <div class="logo-desc">
+                            <p class="text-white fw-bold m-0 fs-2">Weather</p>
+                            <p class="text-white-50 m-0 mini-text">Made By Sheko The Great</p>
+                        </div>
+
+                    </div>
+                    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link rounded active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link rounded" href="#">Features</a>
+                            <a class="nav-link rounded" href="#">Pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <body>
+            <div class="background-banner"></div>
+            <div class="container w-75">
+                <div class="d-flex position-relative my-5">
+                    <input type="email" class="form-control city-input" id="exampleFormControlInput1"
+                        placeholder="Search City!">
+                    <button id="findWeatherBtn"
+                        class="btn btn-primary border rounded rounded-end-4 rounded-start-4 main-btn position-absolute">Find</button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row g-1">
+
+                </div>
+            </div>
+        </body>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="d-flex position-relative my-5 w-75">
+                            <input type="email" class="form-control city-input" id="exampleFormControlInput2"
+                                placeholder="Enter Email to Subscribe!">
+                            <button id="email-subscribe"
+                                class="btn btn-primary border rounded rounded-end-5 rounded-start-5 main-btn position-absolute">Find</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 align-content-center">
+                        <div class="links-section d-flex justify-content-around align-items-center">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
