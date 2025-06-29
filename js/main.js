@@ -1,107 +1,3 @@
-// try {
-//     let x = 20;
-//     console.log(x);
-//     throw new Error("Error2")
-
-// } catch (e) {
-//     console.log(e);
-// }
-
-// var myRequest = new XMLHttpRequest();
-
-// myRequest.open("GET", "https://fakestoreapi.com/products");
-
-// myRequest.send()
-
-// myRequest.addEventListener('load', function () {
-//     console.log(JSON.parse(myRequest.response));
-
-//     document.querySelector('img').setAttribute("src", `${JSON.parse(myRequest.response)[1].image}`)
-//     document.querySelector('h1').innerHTML = `${JSON.parse(myRequest.response)[1].title}`
-// })
-
-//promises
-
-
-// var getPizza = new Promise(function (resolve, fail) {
-//     var result = false;
-
-//     if (result == false) {
-//         resolve("Data is Correct!!")
-//     } else {
-//         fail("Data is not correct you mother father")
-//     }
-// })
-
-// getPizza.then(function (msg) {
-//     console.log(msg);
-// }).catch(function (msg) {
-//     console.log(msg);
-// }).finally(function () {
-//     console.log("finally");
-// })
-
-
-// var pizza = new Promise(function (resolve, fail) {
-//     var isPizza = true;
-
-//     if (isPizza) {
-//         resolve("Done")
-//         console.log("Done");
-//     } else {
-//         fail("Fail")
-//     }
-// })
-
-// function burger() {
-//     new Promise(function (resolve, fail) {
-//         console.log("Burger");
-//         resolve();
-//     })
-// }
-
-// pizza.then(function (msg) {
-//     console.log(msg);
-
-// }).catch(function (msg) {
-//     console.log(msg);
-// })
-
-//promise part 4 video 6
-
-// pizza.then(burger).catch(function (msg) {
-//     console.log(msg);
-
-// })
-
-// var myRequest = new XMLHttpRequest()
-// var cityName;
-// var cityTemp;
-// var selectedCity = document.querySelector("input")
-// var myText = document.querySelector(".my_text")
-// selectedCity.addEventListener("input", function () {
-//     // console.log(selectedCity.value);
-// })
-
-// myRequest.open("GET", `http://api.weatherapi.com/v1/current.json?key=c9fc97bab5b24d71b2a113107252806&q=alex`)
-// myRequest.send();
-
-// myRequest.addEventListener('load', function () {
-//     cityName = JSON.parse(myRequest.response).location.name;
-//     cityTemp = JSON.parse(myRequest.response).current.temp_c;
-//     myText = JSON.parse(myRequest.response).current.condition.text
-//     console.log(myText);
-
-//     document.querySelector("#city_name").innerHTML = cityName
-//     document.querySelector("#city_temp").innerHTML = cityTemp
-//     document.querySelector(".my_text").innerHTML = myText
-// })
-
-// myRequest.addEventListener('error', function () {
-//     console.log("Error");
-// })
-
-
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 
@@ -131,7 +27,12 @@ document.body.addEventListener("keypress", function (e) {
 
 async function getWeather(city) {
     try {
-        var res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c9fc97bab5b24d71b2a113107252806&q=${city}&days=3`)
+        var res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c9fc97bab5b24d71b2a113107252806&q=${city}&days=3`, {
+            method: "GET",
+            headers :{
+                "key": "c9fc97bab5b24d71b2a113107252806" // <=== I want a bonus here HAHA xD
+            }
+        })
         var data = await res.json();
 
         document.querySelector(".row").innerHTML = `<div class="col-md-4">
