@@ -27,7 +27,7 @@ document.body.addEventListener("keypress", function (e) {
 
 async function getWeather(city) {
     try {
-        var res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=c9fc97bab5b24d71b2a113107252806&q=${city}&days=3`, {
+        var res = await fetch(`//api.weatherapi.com/v1/forecast.json?q=${city}&days=3`, {
             method: "GET",
             headers :{
                 "key": "c9fc97bab5b24d71b2a113107252806" // <=== I want a bonus here HAHA xD
